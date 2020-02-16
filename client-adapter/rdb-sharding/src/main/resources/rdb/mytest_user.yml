@@ -6,10 +6,9 @@ concurrent: true
 dbMapping:
   database: ds_lab
   table: t_order
-  targetTable: t_order
-  targetPk:
-    order_id: orderId
-    user_id: user_id
+#  targetTable: mytest2.user
+#  targetPk:
+#    id: id
   mapAll: true
 #  targetColumns:
 #    id:

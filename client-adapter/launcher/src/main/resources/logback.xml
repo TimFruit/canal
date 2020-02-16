@@ -44,7 +44,7 @@
 		<appender-ref ref="STDOUT"/>
 		<appender-ref ref="CANAL-ROOT" />
 	</logger>
-	<logger name="com.alibaba.otter.canal.client.adapter.rdb" additivity="false">
+	<logger name="com.alibaba.otter.canal.client.adapter.rdbsharding" additivity="false">
 		<level value="DEBUG" />
 		<appender-ref ref="STDOUT"/>
 		<appender-ref ref="CANAL-ROOT" />

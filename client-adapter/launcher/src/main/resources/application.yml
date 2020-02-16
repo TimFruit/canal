@@ -14,7 +14,7 @@ canal.conf:
 #  flatMessage: true
   batchSize: 500
   syncBatchSize: 1000
-  retries: 0
+  retries: -1
   timeout:
   accessKey:
   secretKey:
@@ -32,13 +32,15 @@ canal.conf:
     - groupId: g1
       outerAdapters:
       - name: logger
-#      - name: rdb
-#        key: mysql1
-#        properties:
-#          jdbc.driverClassName: com.mysql.jdbc.Driver
-#          jdbc.url: jdbc:mysql://127.0.0.1:3306/mytest2?useUnicode=true
-#          jdbc.username: root
-#          jdbc.password: 121212
+      - name: rdb-sharding
+        key: mysql1
+        properties:
+          jdbc.driverClassName: com.mysql.jdbc.Driver
+          jdbc.url: jdbc:mysql://127.0.0.1:3306/mytest2?useUnicode=true
+          jdbc.username: root
+          jdbc.password: 121212
+
+
 #      - name: rdb
 #        key: oracle1
 #        properties:

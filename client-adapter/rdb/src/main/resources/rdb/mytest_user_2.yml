@@ -5,21 +5,13 @@ outerAdapterKey: mysql1
 concurrent: true
 dbMapping:
   database: ds_lab
-  table: t_order
-  targetTable: t_order
+  table: t_order_item
+  targetTable: t_order_item
   targetPk:
     order_id: orderId
     user_id: user_id
   mapAll: true
-#  targetColumns:
-#    id:
-#    name:
-#    role_id:
-#    c_time:
-#    test1:
-#  etlCondition: "where c_time>={}"
 #  commitBatch: 3000 # 批量提交的大小
-
 
 
 ## Mirror schema synchronize config

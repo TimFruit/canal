@@ -1,0 +1,1 @@
+rdb-sharding=com.alibaba.otter.canal.client.adapter.rdbsharding.RdbShardingAdapter

@@ -1,10 +1,10 @@
-package com.alibaba.otter.canal.client.adapter.rdb.test.sync;
+package com.alibaba.otter.canal.client.adapter.rdbsharding.test.sync;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import com.alibaba.otter.canal.client.adapter.rdb.RdbAdapter;
-import com.alibaba.otter.canal.client.adapter.rdb.test.TestConstant;
+import com.alibaba.otter.canal.client.adapter.rdbsharding.test.TestConstant;
 import com.alibaba.otter.canal.client.adapter.support.DatasourceConfig;
 import com.alibaba.otter.canal.client.adapter.support.OuterAdapterConfig;
 

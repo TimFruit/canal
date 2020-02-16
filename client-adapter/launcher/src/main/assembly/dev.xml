@@ -58,6 +58,13 @@
             </excludes>
         </fileSet>
         <fileSet>
+            <directory>../rdb-sharding/src/main/resources/rdb-sharding</directory>
+            <outputDirectory>/conf/rdb-sharding</outputDirectory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
             <directory>target</directory>
             <outputDirectory>logs</outputDirectory>
             <excludes>

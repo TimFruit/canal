@@ -1,4 +1,4 @@
-package com.alibaba.otter.canal.client.adapter.rdb.test;
+package com.alibaba.otter.canal.client.adapter.rdbsharding.test;
 
 import java.io.BufferedReader;
 import java.io.Reader;

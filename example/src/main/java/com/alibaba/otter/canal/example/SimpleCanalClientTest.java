@@ -4,6 +4,7 @@ import java.net.InetSocketAddress;
 
 import com.alibaba.otter.canal.client.CanalConnector;
 import com.alibaba.otter.canal.client.CanalConnectors;
+import com.alibaba.otter.canal.client.impl.SimpleCanalConnector;
 import com.alibaba.otter.canal.common.utils.AddressUtils;
 
 /**
@@ -26,6 +27,8 @@ public class SimpleCanalClientTest extends AbstractCanalClientTest {
                 destination,
                 "canal",
                 "canal");
+
+        SimpleCanalConnector simpleCanalConnector=(SimpleCanalConnector)connector;
 
         final SimpleCanalClientTest clientTest = new SimpleCanalClientTest(destination);
         clientTest.setConnector(connector);
