@@ -324,6 +324,45 @@ bin/startup.sh
 修改mysql mytest.user表的数据, 将会自动同步到Oracle的MYTEST.TB_USER表下面, 并会打出DML的log
 
 
+
+
+### 4.4 rdb-sharding 适配器 (new 2020-02-19)
+   拓展rdb适配器, 集成sharding-jdbc-core-4.0.0-RC2, 用于分库分表的迁移      
+   
+   单库数据表 -> 分库分表
+   
+#### 4.4.1 conf/rdb中的配置不变, 和rdb适配器使用方法一致
+
+#### 4.4.2 conf/rdb-sharding中的配置, 用于配置sharding-jdbc分库分表规则
+   配置格式, 对应于springboot配置格式   
+   
+   
+   注意事项, 数据源配置属性, 根据连接池类型中属性的不同, 而不同
+   如使用DruidDataSource, url属性为"url", 
+   使用HikariDataSource, url属性为"jdbc-url"
+   
+   ```
+     ds-orders-0:
+       type: com.alibaba.druid.pool.DruidDataSource # 使用 Druid 数据库连接池
+       driver-class-name: com.mysql.jdbc.Driver
+       url: jdbc:mysql://127.0.0.1:3306/ds_lab_orders_0?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+       username: root
+       password: root
+   ```
+   
+   ```
+     ds-orders-1:
+       type: com.zaxxer.hikari.HikariDataSource # 使用 Hikari 数据库连接池
+       driver-class-name: com.mysql.jdbc.Driver
+       jdbc-url: jdbc:mysql://127.0.0.1:3306/ds_lab_orders_1?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+       username: root
+       password: root
+   ```
+   
+   
+   
+
+
 ## 五、ElasticSearch适配器
 ### 5.1 修改启动器配置: application.yml
 ```

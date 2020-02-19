@@ -65,16 +65,7 @@ public class AdapterShardingDataSourceFactory {
 
     }
 
-//
-//    public static DataSource newInstance() throws SQLException, ReflectiveOperationException, IOException {
-//        File yamlFile=ShardingConfigLoader.loadYamlFile();
-//
-//
-//        DataSource dataSource=YamlShardingDataSourceFactory.createDataSource(yamlFile);
-//
-//        return dataSource;
-//
-//    }
+
 
 
     public static void main(String[] args) throws SQLException, ReflectiveOperationException, IOException {
