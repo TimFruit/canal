@@ -8,7 +8,7 @@ dbMapping:
   table: t_order_item
   targetTable: t_order_item
   targetPk:
-    order_id: orderId
+    order_id: order_id
     user_id: user_id
   mapAll: true
 #  commitBatch: 3000 # 批量提交的大小
